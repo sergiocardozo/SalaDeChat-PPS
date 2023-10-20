@@ -1,0 +1,131 @@
+
+ion-content {
+    --background: rgb(1, 42, 74);
+    --background: linear-gradient(49deg, rgba(1, 42, 74, 1) 8%, rgba(169, 214, 229, 1) 71%);
+}
+
+ion-img {
+
+    width: 3rem;
+}
+
+ion-toolbar {
+    --ion-background-color: #0D5D56;
+}
+
+ion-card {
+    --ion-background-color: transparent;
+    box-shadow: 8px 10px 10px 1px rgba(0, 0, 0, 0.5);
+    img {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+p {
+    color: #8fd5a6;
+    font-size: 1, 6rem;
+}
+
+h1{
+    color: #e5c2c0;
+    font-size: 3rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+
+}
+h2 {
+    color: #e5c2c0;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+h4 {
+    color: #070707;
+    font-size: 1.4rem;
+    font-weight: bolder;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+}
+ion-card-title {
+    color: #e5c2c0;
+    font-size: 2rem;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+
+}
+
+ion-card-subtitle {
+    padding-top: 10px;
+    font-size: 11px;
+    color: #898585;
+    text-align: center;
+    font-weight: 300;
+}
+
+/* ion-item {
+
+    ion-input {
+        color: white;
+        --background: transparent;
+    }
+} */
+
+.signin-btns {
+    margin-top: 15px;
+    text-align: center;
+
+    .ingresoRapido {
+        color: #e5c2c0;
+        --ion-color-primary: #61A5C2;
+        width: 10rem;
+        --border-radius: 50%;
+        height: 10rem;
+    }
+}
+ion-input.custom {
+    --background: #A9D6E5;
+    --color: black;
+}
+
+.loginbtn {
+    --ion-color-primary: #013A63;
+}
+
+hr {
+    height: 3px;
+    background-color: #FFBA08;
+}
+
+
+.wrapform {
+    margin-top: 20px;
+}
+
+.errors {
+    font-size: small;
+    color: #fd0000;
+    padding-left: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.password-forgot {
+    text-align: right;
+
+    ion-button {
+        font-size: 12px;
+        text-transform: initial;
+        color: white;
+
+        strong {
+            color: #370617;
+        }
+    }
+}

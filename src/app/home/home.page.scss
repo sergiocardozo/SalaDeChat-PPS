@@ -1,0 +1,251 @@
+ion-content {
+  --background: #012a4a;
+  --background: linear-gradient(49deg, rgba(1, 42, 74, 1) 8%, rgba(169, 214, 229, 1) 71%);
+  overflow: hidden;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+  ion-grid {
+    display: flex;
+    flex-flow: column;
+    height: 100%
+  }
+
+  .btn-danger {
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    width: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border: 2px solid #fff;
+    box-shadow: 2px 2px 3px #000;
+  }
+
+  .btn-danger:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+
+  .btn-chat-A {
+    background: rgb(231, 111, 81);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    border: 5px solid #F4A261;
+    text-align: center;
+    box-shadow: 2px 2px 3px #000;
+
+    h2 {
+      color: #E76F51;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      font-weight: bolder;
+      line-height: 15rem;
+      text-shadow: 3px 3px 1px #080808;
+      background: url("../../assets/img/salaChat.jpg");
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+
+    }
+  }
+
+  .btn-chat-A:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 16px #012A4A;
+    transition: transform 0.3s;
+  }
+
+  .btn-chat-B {
+    background: #264653;
+    border-radius: 15px;
+    border: 5px solid #A9D6E5;
+    text-align: center;
+    box-shadow: 2px 2px 3px #2A9D8F;
+
+    h2 {
+      color: #264653;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 3rem;
+      font-weight: bolder;
+      line-height: 15rem;
+      text-shadow: 3px 3px 1px #000;
+      background: url("../../assets/img/chatb.png");
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .btn-chat-B:active {
+    transform: scale(0.9);
+    box-shadow: 0 0 16px #012A4A;
+    transition: transform 0.3s;
+  }
+}
+
+// CONVERSACION 4A  *************************************************************
+
+.contenedor-carta-a {
+  width: 98%;
+  height: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 0 20px #E76F51;
+}
+
+.card-body-a {
+  overflow: hidden;
+  height: 100%;
+  background-image: linear-gradient(rgba(244, 162, 97, 0.5), rgba(244, 162, 97, 0.5)), url("../../assets/img/fondoA.jpg");
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 0 16px #F4A261;
+}
+
+.card-header-a {
+  background-color: #E76F51;
+  color: white;
+  font-weight: bolder;
+  box-shadow: 0 0 16px #61A5C2;
+}
+
+.form-control-a {
+  background: #E9C46A;
+  color: #020202;
+}
+
+.form-control-a::placeholder {
+  color: rgb(10, 10, 10);
+}
+
+.btn-enviar-a {
+  cursor: pointer;
+  color: #fff;
+  background: #087a04;
+}
+
+.btn-enviar-a:active {
+  transition: all 0.5s;
+  transform: scale(0.8);
+}
+
+.contenedor-mensajes {
+  overflow: scroll;
+  padding: 0.3rem;
+  height: 100%;
+}
+
+.contenedor-mensajes::-webkit-scrollbar {
+  display: none;
+}
+
+.card-footer-a {
+  background: #E76F51;
+}
+
+.mensaje-enviado {
+  display: block;
+  float: right;
+  background-color: rgb(244, 162, 97, 0.9);
+  font-weight: bold;
+  min-width: 50.1%;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.mensaje-recibido {
+  display: block;
+  float: left;
+  background-color: rgb(38, 70, 83);
+  color: white;
+  font-weight: bold;
+  min-width: 60.1%;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.email-1 {
+  font-size: 18px;
+  color: #012A4A;
+}
+
+.email-2 {
+  font-size: 18px;
+  color: #F4A261;
+}
+
+.fecha {
+  font-size: 0.7rem;
+  font-weight: bold;
+  text-decoration: underline;
+  color: rgb(248, 248, 248);
+  text-align: right;
+  font-weight: lighter;
+  font-weight: bold;
+  float: right;
+}
+
+.view-from-right {
+  animation: viewFromRight 0.5s;
+}
+
+@keyframes viewFromRight {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+// CONVERSACION 4B *************************************************************
+
+.contenedor-carta-b {
+  width: 97%;
+  height: 97%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.card-body-b {
+  height: 100%;
+  overflow: hidden;
+  background-image: linear-gradient(rgba(38, 70, 83, 0.5),
+  rgba(38, 70, 83, 0.5)), url("../../assets/img/fondoB.jpg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+.card-header-b {
+  background-color: #264653;
+  color: white;
+  font-weight: bolder;
+}
+
+.form-control-b {
+  background: #2A9D8F;
+  color: #080808;
+}
+
+.form-control-b::placeholder {
+  color: rgb(2, 2, 2);
+}
+
+.btn-enviar-b {
+  cursor: pointer;
+  color: white;
+  background: #036e33;
+}
+
+.btn-enviar-b:active {
+  transition: all 0.5s;
+  transform: scale(0.8);
+}
+
+.card-footer-b {
+  background: #264653;
+
+}

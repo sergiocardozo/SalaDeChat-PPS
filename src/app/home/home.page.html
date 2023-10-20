@@ -1,0 +1,103 @@
+<ion-content [fullscreen]="true">
+  <ion-fab slot="fixed" vertical="top" horizontal="start">
+    <ion-fab-button color="dark">
+      <ion-icon name="menu-sharp"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="bottom">
+      <ion-fab-button *ngIf="chat == 1 || chat == 2" (click)="goToClassrooms()">
+        <img src="../../assets/img/flecha-izquierda.png" alt="">
+      </ion-fab-button>
+      <ion-fab-button (click)="logout()" color="danger">
+        <img src="../../assets/img/cerrar-sesion.png" alt="">
+      </ion-fab-button>
+      
+    </ion-fab-list>
+  </ion-fab>
+
+  <!-- MENU PRINCIPAL -->
+  <div style="width: 100%; height: 100%" *ngIf="chat == 0">
+    <ion-grid class="ion-padding">
+      <ion-row style="flex-grow: 1; margin-bottom: 1rem; height: 50%">
+        <ion-col class="btn-chat-A" (click)="showChat4A()">
+          <div>
+            <h2>PPS-4A</h2>
+          </div>
+        </ion-col>
+      </ion-row>
+      <ion-row style="flex-grow: 1; margin-bottom: 1rem; height: 50%">
+        <ion-col class="btn-chat-B" (click)="showChat4B()">
+          <h2>PPS-4B</h2>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- CHAT A -->
+  <section class="chat-container" *ngIf="chat == 1" style="height: 100%">
+   
+    <div class="card text-center contenedor-carta-a view-from-right">
+      <div class="card-header card-header-a">SALA 4°A</div>
+
+      <div class="card-body-a">
+        <div id="contenedor-mensajes" class="contenedor-mensajes">
+          <p *ngFor="let message of messageListA" class="p-3 mensajes" [ngClass]="
+              user.uid == message.user.uid
+                ? 'mensaje-enviado'
+                : 'mensaje-recibido'
+            ">
+            
+            <span *ngIf="user.uid != message.user.uid"
+              [ngClass]="user.uid == message.user.uid ? 'email-1' : 'email-2'">{{ message.user.name }}<br /></span>
+            {{ message.text }} <br />
+            <span class="fecha">{{ message.date }}</span>
+          </p>
+        </div>
+      </div>
+
+      <form class="card-footer card-footer-a text-muted input-group">
+        <input type="text" class="form-control form-control-a" placeholder="Ingrese su mensaje" [(ngModel)]="newMessage"
+          [ngModelOptions]="{ standalone: true }" />
+        <div class="input-group-append" (click)="sendMessageA()">
+          <span class="input-group-text btn-enviar-a" id="basic-addon2">
+            <span><ion-icon name="send"></ion-icon></span>
+          </span>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!--******************************* CHAT 4B*******************************-->
+  <section class="chat-container" *ngIf="chat == 2" style="height: 100%">
+    
+    <div class="card text-center contenedor-carta-b view-from-right ">
+      <div class="card-header card-header-b">SALA 4°B</div>
+
+      <div class="card-body-b">
+        <div id="contenedor-mensajes" class="contenedor-mensajes">
+          <p *ngFor="let message of messageListB" class="p-2 mensajes" [ngClass]="
+              user.uid == message.user.uid
+                ? 'mensaje-enviado'
+                : 'mensaje-recibido'
+            ">
+            
+            <span *ngIf="user.uid != message.user.uid"
+              [ngClass]="user.uid == message.user.uid ? 'email-1' : 'email-2'">{{ message.user.name }}</span>
+            <br />
+            {{ message.text }} <br />
+            <span class="fecha">{{ message.date }}</span>
+          </p>
+        </div>
+      </div>
+
+      <form class="card-footer card-footer-b text-muted input-group">
+        <input type="text" class="form-control form-control-b" placeholder="Ingrese su mensaje" [(ngModel)]="newMessage"
+          [ngModelOptions]="{ standalone: true }" />
+        <div class="input-group-append" (click)="sendMessageB()">
+          <span class="input-group-text btn-enviar-b" id="basic-addon2">
+            <span><ion-icon name="send"></ion-icon></span>
+          </span>
+        </div>
+      </form>
+    </div>
+  </section>
+</ion-content>
